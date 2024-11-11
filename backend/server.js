@@ -3,12 +3,13 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/auth'); // Import the auth routes
+const blogRoutes = require('./routes/blog');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
-
+app.use('/api/blogs', blogRoutes);
 // Basic test route
 app.get('/', (req, res) => {
     res.send('Backend server is running!');
