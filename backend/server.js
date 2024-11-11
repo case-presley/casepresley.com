@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const authRoutes = require('./routes/auth'); // Import the auth routes
 const blogRoutes = require('./routes/blog');
 const projectRoutes = require('./routes/project');
+const subscriptionRoutes = require('./routes/subscription');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -12,6 +13,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use('/api/blogs', blogRoutes);
 app.use('/api/projects', projectRoutes);
+app.use('/api/subscriptions', subscriptionRoutes);
 
 // Basic test route
 app.get('/', (req, res) => {
