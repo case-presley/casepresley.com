@@ -14,6 +14,7 @@ app.use(express.json());
 app.use('/api/blogs', blogRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/subscriptions', subscriptionRoutes);
+app.use('/api', authRoutes);
 
 // Basic test route
 app.get('/', (req, res) => {
