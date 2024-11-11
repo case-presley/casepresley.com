@@ -1,19 +1,23 @@
-// server/server.js
+// backend/server.js
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const authRoutes = require('./routes/auth'); // Import the auth routes
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
-// Basic route to test server
+// Basic test route
 app.get('/', (req, res) => {
     res.send('Backend server is running!');
 });
 
-// Connect to MongoDB and start the server
+// Use authentication routes
+app.use('/api/auth', authRoutes);
+
+// Connect to MongoDB
 mongoose.connect(process.env.DB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
