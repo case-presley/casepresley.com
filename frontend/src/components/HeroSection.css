@@ -1,0 +1,86 @@
+/* src/components/HeroSection.css */
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1A1A1A, #2A2A2A);
+    color: #EDEDED;
+    text-align: center;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #E0E0E0;
+}
+
+.name-highlight {
+    font-weight: 700;
+    background: linear-gradient(45deg, #FF4D6D, #9A4DFF);
+    background-size: 200%; /* Allow space for gradient to move */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateGradient 2s ease infinite;
+}
+
+.hero-role {
+    font-size: 2rem;
+    color: #B0BEC5;
+}
+
+.hero-role span {
+    font-weight: 700;
+    background: linear-gradient(45deg, #FF4D6D, #9A4DFF);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateGradient 2s ease infinite;
+}
+
+@keyframes animateGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin: 20px 0;
+    color: #A0A0A0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hero-button {
+    padding: 12px 24px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-image: linear-gradient(45deg, #FF4D6D, #9A4DFF);
+    background-size: 200%;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none; /* Remove underline */
+    transition: transform 0.3s ease;
+    animation: animateGradient 2s ease infinite; /* Only background animated */
+}
+
+.hero-button:hover {
+    transform: scale(1.1) rotate(3deg);
+}

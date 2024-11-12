@@ -1,0 +1,45 @@
+/* src/components/Footer.css */
+
+.footer {
+    padding: 20px;
+    background-color: #121212;
+    color: #B0BEC5;
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #252525;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #9A4DFF;
+    transform: scale(1.1);
+}
+
+/* Add gradient animation to copyright text */
+.footer p {
+    font-size: 1rem;
+    background: linear-gradient(45deg, #FF4D6D, #9A4DFF);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateGradient 2s ease infinite;
+}
+
+@keyframes animateGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

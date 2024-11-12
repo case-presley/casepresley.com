@@ -1,0 +1,65 @@
+.project-progress {
+    padding: 60px 20px;
+    background-color: #1A1A1A;
+    color: #EDEDED;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.progress-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #FF4D6D, #9A4DFF);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateGradient 2s ease infinite;
+}
+
+.progress-list {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.progress-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.project-name {
+    font-size: 1.2rem;
+    color: #cbcbcb;
+    flex: 1;
+}
+
+.progress-bar {
+    background-color: #333;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 15px;
+    height: 10px;
+    width: 100%;
+    flex: 2;
+    position: relative;
+}
+
+.progress-level {
+    background: linear-gradient(45deg, #FF4D6D, #9A4DFF);
+    height: 100%;
+    transition: width 1s ease-in-out;
+}
+
+.progress-percent {
+    font-size: 1rem;
+    color: #A0A0A0;
+    flex: 0.5;
+}
+
+@keyframes animateGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

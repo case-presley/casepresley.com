@@ -22,3 +22,7 @@ body {
   border: 1px solid #ccc;
   background-color: #fff;
 }
+
+html {
+  scroll-behavior: smooth;
+}

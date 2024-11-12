@@ -1,0 +1,154 @@
+.projects {
+    padding: 60px 20px;
+    background-color: #1A1A1A;
+    color: #EDEDED;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.projects-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    background: linear-gradient(45deg, #FF4D6D, #9A4DFF);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateGradient 2s ease infinite;
+}
+
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    height: 400px;
+}
+
+.project-card {
+    position: absolute;
+    width: 300px;
+    height: 350px;
+    background-color: #2E2E2E;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0.7) translateX(-100px) rotateY(-45deg);
+}
+
+.project-card.active {
+    opacity: 1;
+    transform: scale(1) translateX(0) rotateY(0);
+    z-index: 2;
+}
+
+.project-card.prev {
+    opacity: 0.7;
+    transform: scale(0.8) translateX(-150px) rotateY(-30deg);
+    z-index: 1;
+}
+
+.project-card.next {
+    opacity: 0.7;
+    transform: scale(0.8) translateX(150px) rotateY(30deg);
+    z-index: 1;
+}
+
+/* Hover effect only applies to the active card */
+.project-card.active:hover {
+    transform: scale(1.05);
+    z-index: 3;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    left: 40%;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #9A4DFF;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.carousel-btn.left-btn {
+    left: 5%;
+}
+
+.carousel-btn.right-btn {
+    right: 5%;
+}
+
+.carousel-btn:hover {
+    color: #FF4D6D;
+    filter: drop-shadow(0 0 6px rgba(255, 77, 109, 0.5));
+}
+
+.carousel-btn::before {
+    content: '';
+    border: solid currentColor;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.carousel-btn.left-btn::before {
+    transform: rotate(135deg); /* Pointing left */
+}
+
+.carousel-btn.right-btn::before {
+    transform: rotate(-45deg); /* Pointing right */
+}
+
+.animated-text {
+    font-size: 1.5rem;
+    background: linear-gradient(45deg, #FF4D6D, #9A4DFF);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateGradient 2s ease infinite;
+}
+
+@keyframes animateGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.project-card p {
+    color: #A0A0A0;
+    margin: 10px 0;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tech {
+    background: linear-gradient(45deg, #FF4D6D, #9A4DFF);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: animateGradient 3s ease infinite;
+}
+
+.tech:hover {
+    transform: scale(1.1);
+    text-shadow: 0 4px 8px rgba(255, 77, 109, 0.3), 0 4px 8px rgba(154, 77, 255, 0.3);
+}
