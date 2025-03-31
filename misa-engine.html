@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Misa Engine | Case Presley</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes/themes/prism-night-owl.css">
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-java.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- Header Navigation -->
+<header id="site-header">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="project-detail fade-in">
+  <h1 class="glow">The Misa Engine</h1>
+  <p class="project-subtext">The Misa Engine is an open-source 2D RPG engine built in Java, designed for turn-based,
+    pixel-art RPGs inspired by classic Final Fantasy games.</p>
+
+  <!-- Overview -->
+  <div class="project-description">
+    <p>
+      The goal of the Misa Engine is to make RPG development easier while remaining lightweight and flexible,
+      allowing developers to focus on game design rather than low-level implementation details.
+      I want it to be as easy and user-friendly as possible for someone to pick this engine up and make
+      a quick prototype, or even make a full game with.
+    </p>
+  </div>
+
+  <!-- YouTube Embed -->
+  <div class="video-container" style="margin: 2rem 0;">
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Screenshot placeholders -->
+  <div class="project-screenshots">
+    <div class="screenshot-placeholder">Screenshot 1</div>
+    <div class="screenshot-placeholder">Screenshot 2</div>
+    <div class="screenshot-placeholder">Screenshot 3</div>
+    <div class="screenshot-placeholder">Screenshot 3</div>
+  </div>
+
+
+  <!-- Code Snippet -->
+  <div class="code-section">
+    <h2 class="glow">From Nothing to an Animated Character Rendering! </h2>
+    <pre><code class="language-java">
+import misa.core.GameLoop;
+import misa.core.GameWindow;
+import misa.entities.Player;
+
+@SuppressWarnings("unused")
+public class TestGame
+{
+    public static void main(String[] args)
+    {
+        GameLoop gameLoop =
+                GameLoop.createDefault();
+
+        Player player =
+                gameLoop.createDefaultPlayer();
+
+        player.setAnimation
+                (player.loadAnimations(new String[]
+                {
+                    "test_assets/girlidle/idleSouth/girlIdle000.png",
+                    "test_assets/girlidle/idleSouth/girlIdle001.png",
+                    "test_assets/girlidle/idleSouth/girlIdle002.png",
+                    "test_assets/girlidle/idleSouth/girlIdle003.png",
+                }));
+
+        GameWindow.launchGame(gameLoop);
+    }
+}
+  </code></pre>
+  </div>
+
+
+  <!-- Roadmap -->
+  <h2 class="glow" style="margin-top: 3rem;">Development Roadmap</h2>
+  <div class="project-widget">
+
+    <div class="project">
+      <p><strong>Major Update 1: Core Mechanics</strong></p>
+      <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+    </div>
+
+    <div class="project">
+      <p><strong>Major Update 2: Physics</strong></p>
+      <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+    </div>
+
+    <div class="project">
+      <p><strong>Major Update 3: Lighting & NPCs</strong></p>
+      <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+    </div>
+
+    <div class="project">
+      <p><strong>Major Update 4: Save & Inventory</strong></p>
+      <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+    </div>
+
+    <div class="project">
+      <p><strong>Major Update 5: UI & Dialogue</strong></p>
+      <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+    </div>
+
+    <div class="project">
+      <p><strong>Major Update 6: Combat & Effects</strong></p>
+      <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+    </div>
+
+    <div class="project">
+      <p><strong>Major Update 7: Scenes & Data</strong></p>
+      <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+    </div>
+
+    <div class="project">
+      <p><strong>Major Update 8: Optimization & Stability</strong></p>
+      <div class="progress-bar"><div class="progress" style="width: 0%;"></div></div>
+    </div>
+  </div>
+
+  <!-- Links -->
+  <div class="project-links" style="margin-top: 2rem;">
+    <a href="https://github.com/case-presley/misa-engine" target="_blank">
+      <i class="fab fa-github"></i> Source Code
+    </a>
+    <a href="https://dev.to/casepresley" target="_blank">
+      <i class="fas fa-book-open"></i> Blog Posts
+    </a>
+  </div>
+</section>
+
+<!-- Footer CTA -->
+<footer id="site-footer">
+  <div class="footer-icons">
+    <a href="mailto:casepresley.dev@tuta.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    <a href="https://github.com/case-presley" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://youtube.com/@casepresley" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://tiktok.com/@casepresley" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://instagram.com/casepresley" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

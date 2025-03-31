@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Case Presley | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- Landing Hero Section -->
+<section id="hero" class="full-page center-text fade-in">
+  <div class="hero-content">
+    <h1 class="glow">Hey, I'm Case Presley</h1>
+    <p class="subheading">Welcome to my portfolio!</p>
+    <div class="hero-buttons">
+      <a href="#about" class="nav-button glow-border">About Me</a>
+      <a href="portfolio.html" class="nav-button glow-border">Portfolio</a>
+      <a href="#contact" class="nav-button glow-border">Contact</a>
+    </div>
+  </div>
+</section>
+
+<!-- About Me Section -->
+<section id="about" class="full-page fade-in">
+  <h2 class="glow">About Me</h2>
+  <p class="about-intro">
+    I’m a Computer Science student primarily focused on game development.
+    I’m passionate about video games,
+    open source software,
+    and almost all things computers.
+  </p>
+
+  <div class="info-panels">
+    <div class="info-card cyber-box">
+      <h3>Learning</h3>
+      <ul>
+        <li>Assembly / C</li>
+        <li>Low-Level Experimentation</li>
+        <li>Raspberry Pi Development</li>
+        <li>Godot</li>
+      </ul>
+    </div>
+
+    <div class="info-card cyber-box progress-card">
+      <h3>Now Working On</h3>
+      <ul>
+        <li>
+          ⚙️ Misa Engine
+          <div class="progress-bar"><div class="progress" style="width: 5%;"></div></div>
+        </li>
+        <li>
+          🧟 Zombies Can't Read
+          <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+        </li>
+        <li>
+          🧪 Potion Rush
+          <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="info-card cyber-box">
+      <h3>Stack & Tools</h3>
+      <ul>
+        <li>Java, C#, Python, C, Assembly</li>
+        <li>Unity, Godot</li>
+        <li>JetBrains Suite, NeoVim</li>
+        <li>Alpine Linux, Debian Linux, Windows</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section fade-in">
+  <h2 class="glow">Contact Me :)</h2>
+  <div class="contact-icons">
+    <a href="mailto:casepresley.dev@tuta.com" target="_blank"><i class="fas fa-envelope"></i></a>
+    <a href="https://github.com/case-presley" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://youtube.com/@casepresley" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="https://tiktok.com/@casepresley" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://instagram.com/casepresley" target="_blank"><i class="fab fa-instagram"></i></a>
+  </div>
+</section>
+
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.2 };
+  const appearOnScroll = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      obs.unobserve(entry.target);
+    });
+  }, appearOptions);
+  faders.forEach(fader => appearOnScroll.observe(fader));
+</script>
+</body>
+</html>
