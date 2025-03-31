@@ -514,3 +514,99 @@ pre, code {
   background-color: #2a2a2a;
   color: #f78acb;
 }
+
+/* === Fixes for Mobile Breakage === */
+
+html, body
+{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px)
+{
+  /* Let cards shrink naturally */
+  .info-card,
+  .project-card
+  {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Fix full-page height issues on mobile */
+  .full-page
+  {
+    height: auto;
+    min-height: calc(100vh - 80px);
+    padding: 4rem 1rem;
+  }
+
+  .info-panels,
+  .project-grid,
+  .spotlight-grid
+  {
+    flex-direction: column !important;
+    display: flex !important;
+    align-items: stretch;
+  }
+
+  .contact-icons
+  {
+    flex-wrap: wrap;
+    font-size: 2rem;
+    gap: 1.5rem;
+  }
+
+  .portfolio-controls
+  {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .project-links
+  {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-screenshots
+  {
+    grid-template-columns: 1fr;
+  }
+
+  #site-header nav ul
+  {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px)
+{
+  h1
+  {
+    font-size: 2rem;
+  }
+
+  .subheading,
+  .about-intro,
+  .project-description
+  {
+    font-size: 1rem;
+  }
+
+  .portfolio-controls select
+  {
+    width: 100%;
+  }
+
+  .project-card .tags span
+  {
+    font-size: 0.7rem;
+  }
+}
+
+.hero-content {
+  max-width: 100%;
+  word-wrap: break-word;
+}
